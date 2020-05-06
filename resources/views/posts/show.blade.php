@@ -37,7 +37,9 @@
       <h1>{{ $post->title }}</h1>
         <div class="divider"></div>
         <div class="image-w-text">
-          <figure class="block-left"><img src="{{asset('img/img-post-2.png')}}" alt=""></figure>
+          <figure class="block-left">
+            <img class="img-responisve" src="{{asset('img/img-post-2.png')}}" alt="">
+          </figure>
           <div>
             {!! $post->body !!}
           </div>

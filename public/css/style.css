@@ -299,13 +299,11 @@ a.btn-bar{
 		  display:flex;
 		  justify-content: center;
 		  align-items: center;
-		  width: 34.5%;
-		  height: 55%;
+		  max-width: 100%;
+		  height: 47%;
 		  position: absolute;
-		 /* top: 425px;
-		  left: 475px;*/
 		  color:aliceblue ;
-		  font-size: 70px;
+		  font-size: 100px;
 		  background-color: rgba(0, 0, 0, 0.5);
 		 
 	  }

@@ -13,7 +13,9 @@
 		<article class="post">
 
 		@if($post->photos->count() === 1)
-		<figure class="img-cite"><img src="{{ $post->photos->first()->url }}" class="img-responsive" alt="" ></figure>
+		<figure class="img-cite">
+			<img src="{{ $post->photos->first()->url }}" class="img-responsive" alt="" >
+		</figure>
 		
 		@elseif($post->photos->count() > 1)
 
