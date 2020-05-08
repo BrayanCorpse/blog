@@ -82,7 +82,7 @@
 
               
               <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-5">
 
               <div class="form-group">
                
@@ -109,17 +109,17 @@
                   
                   <label for="inlineFormInputGroup">Categorías</label>
 
-                  <div class="input-group mb-2">
+               
                     <div class="input-group-prepend">
                       <div class="input-group-text"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
                       
-                  <select name="category" class="form-control " id="inlineFormInputGroup" style="width: 100%;">
+                  <select name="category" class="form-control select2" id="inlineFormInputGroup" style="width: 100%;">
                     <option value="">Selecciona una categoría</option>
                  @foreach($categories as $category)
                     <option value="{{ $category->id }}" {{ old('category', $post->category_id)  == $category->id ? 'selected' : "" }}>{{ $category->name}}</option>
                  @endforeach
                   </select>
-                </div><!--input-group-prepend -->
+         
                  
        {!! $errors->first('category','<h5><span class="badge badge-danger">:message</span></h5>')!!}
                   </div><!--/input-group mb-2-->
@@ -292,7 +292,9 @@
 
    //Initialize Select2 Elements
    $('.select2').select2({
-      theme: 'bootstrap4'
+      theme: 'bootstrap4',
+      tags: true
+
     })
 
 

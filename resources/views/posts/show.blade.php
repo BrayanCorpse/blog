@@ -6,11 +6,18 @@
 
 @section('content')
 
+<style>
+  .video iframe{
+		width: 100%;
+	}
+</style>
 
 <article class="post  container">
 
     @if($post->photos->count() === 1)
-		<figure><img src="{{ $post->photos->first()->url }}" class="img-fluid" width="100%" height="500"></figure>
+		<figure>
+      <img src="{{ $post->photos->first()->url }}" class="img-fluid" width="100%" height="500">
+    </figure>
     
    @elseif($post->photos->count() >1)
 

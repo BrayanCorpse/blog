@@ -2,6 +2,12 @@
 
 @section('content')
 
+<style>
+	.video iframe{
+		  width: 100%;
+	  }
+  </style>
+  
 	<section class="posts container">
 		@if(isset($title))
 		<h3><small><mark>{{ $title }}</mark></small></h3>

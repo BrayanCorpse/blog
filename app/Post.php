@@ -44,4 +44,11 @@ class Post extends Model
     {
       return $this->hasMany(Photo::class);
     }
+
+    public function setPublishedAttribute($published_at)
+    {
+      $this->attributes['published_at'] = $published_at ? Carbon::parse($published_at) : null;
+    }
+
+  
 }

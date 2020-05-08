@@ -59,7 +59,14 @@
                   
                   <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn-info"><i class="fa fa-cogs" aria-hidden="true"></i></a>
                   
-                  <a href="#" class="btn btn-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                  <form method="POST" action="{{ route('admin.posts.destroy', $post) }}" style="display: inline">
+                    {{ csrf_field() }} {{ method_field('DELETE') }}
+
+                    <button  class="btn btn-danger" onclick="return confirm('Estas seguro de eliminar esta publicación?')"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+
+                  </form>
+
+                  
 
                   </td>
 
